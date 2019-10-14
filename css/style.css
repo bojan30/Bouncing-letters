@@ -1,0 +1,58 @@
+@font-face{
+    font-family: 'Helvetica Neue';
+    src: url('../font/helveticaneue-condensed-webfont.woff');
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Helvetica Neue', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #140E15;
+    color: #EEC548;
+    font-size: 5rem;
+    line-height: 1.6;
+    font-weight: 600;
+    font-stretch: extra-condensed;
+    letter-spacing: 2px;
+}
+.container{
+    perspective: 700px;
+}
+.paragraph{
+    text-align: center;
+    transform: rotateX(50deg);
+    font-stretch: ultra-condensed;
+}
+.letter{
+    cursor: pointer;
+    display: inline-block;
+    transform-origin: center bottom;
+    padding: 0;
+}
+
+.letter.active{
+    animation-name: letter;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes letter {
+    0%{
+        transform: scaleY(1);
+    }
+    15%{
+        transform: scaleY(0.6);
+    }
+    60%{
+        transform: scaleY(1.2);
+    }
+    100%{
+        transform: scaleY(1);
+    }
+}
